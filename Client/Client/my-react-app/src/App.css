@@ -1,0 +1,615 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+section{
+    margin: 0;
+    padding: 0;
+}
+.Header{
+    position: relative;
+    top:0;
+    left: 0;
+    z-index: 100;
+
+}
+.MainBody{
+    width: 100%;
+    flex-grow: 1;
+    background-color: none;
+}
+
+#root{
+  width: 100%;
+}
+
+
+/* TOP bar */
+
+.navbar{
+    width: 100%;
+    height: 68px;
+    min-width: 68px;
+    background-color: black;
+    padding: 8px 24px;
+    position: fixed;
+
+
+}
+.navbar_inner{
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left_icons{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.left_icons img ,.right_icons img{
+    cursor: pointer;
+    margin: 0px 20px 0px 20px;
+}
+
+.right_icons{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+/*                  SideBar              */
+
+
+
+.sidebar{
+    height: 100vh;
+    width: 15vw;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    padding: 24px 24px;
+    
+
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: display 10s ease;
+
+
+}
+.visible{
+    display: flex;
+
+    
+
+}
+
+.close{
+    width: 100%;
+    height: 5%;
+}
+
+
+.sidebarlogo{
+    width: 100%;
+    height: 25%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.sidebarlogo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.menulist{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 20px;
+    
+}
+
+.menulist li{
+    list-style-type: none;
+    width: 100%;
+    transition: background-color 0.5s ease;
+
+    
+}
+.menulist li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 10pt;
+    font-weight: bolder;
+    font-family:  sans-serif;
+   
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    padding: 8px 8px;
+    
+}
+.menulist li a:active{
+   border-left: 10px solid white;
+
+}
+.menulist li a:hover{
+    transform: scale(2.1, 2.1);
+    transform-origin: right;
+    transition: transform 0.2s ease;
+
+
+
+
+}
+
+.details{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: self-end;
+    flex-direction: column;
+}
+.detailstext{
+    font-weight: bolder;
+    color: white;
+    margin-bottom: 15px;
+}
+
+
+.webBody{
+  width: 100%;
+}
+
+        /*           top background      */
+
+
+.first_bg{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    overflow: hidden;
+
+}
+.first_bg img{
+    height: 100%;
+    width: 100%;
+    display: block;
+
+}
+
+/* TOp background end */
+
+/*                 Artists                  */
+
+
+.artists{
+    width:100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+
+.artistsimg{
+   
+    height: 60vh;
+    width: 100%;
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+.button1{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+
+
+.artistsbtn{
+    background-color: grey;
+    border-radius: 3%;
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px 80px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    border: none;
+
+
+}
+
+.button1 :hover{
+    background-color: red;
+    color: white;
+
+}
+
+
+
+/*                   Artists end              */
+
+/* Albums */
+
+.albums{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;   
+    flex-direction: column;
+    position: relative;
+    background-color: none;
+
+}
+
+.newrelease{
+    position: absolute;
+    top: -5%;
+    right: 0;
+    padding: 24px 206px;
+    font-style: italic;
+    font-weight: bolder;
+    background-color: red;
+    color: white;
+    text-transform: uppercase;
+    font-size: 36px;
+}
+
+.albuminfo{
+    width: 80%;
+    height: 100%;
+}
+
+
+.landscape{
+    width: 100%;
+    height: 100%;
+    
+}
+.landscape a img, .square a img, .artists img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.square{
+    width: 35vh;
+    height: 35vh;
+    position: absolute;
+    right: 20%;
+    z-index: 20;
+    top: 70%;
+}
+
+.scrollbtn{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    
+}
+
+.prev, .next{
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    padding: 8px 8px;
+    margin-right: 15pt;
+}
+
+
+.spacing{
+    background-color: white;
+    height: 20vh;
+    width: 100%;
+}
+
+/*             Merches                  */
+
+.merches{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    
+}
+
+.merchtext{
+    width: 100%;
+    height: 35%;
+    background-color: orange;
+    color: white;
+    text-align: center; 
+    font-size: 10vh;
+    
+    
+    
+    
+}
+
+.catalogue{
+    width: 60%;
+    height: 65%;
+    
+    
+    
+    
+}
+p{
+    
+}
+.vertical-text{
+
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    transform: rotate(-90deg);
+    padding: 24px 206px;
+    font-style: italic;
+    font-weight: bolder;
+    color: white;
+    background-color: red;
+    text-transform: uppercase;
+    font-size: 36px;
+    
+
+    
+}
+.horizontal-text{
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: bolder;
+
+}
+
+.merchscroll{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+
+.merchscroll li {
+    height: 80%;
+    width: 30%;
+    background-color: white;
+    list-style-type: none;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+}
+.merchscroll li a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* MeRCHES END */
+/* APPLICATION PROMOTION SECTION */
+
+
+.application{
+width: 100%;
+background-color: white;
+
+}
+
+.applicationlink{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+
+}
+.applicationlink li{
+    width: 100%;
+    list-style-type:  none;;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+
+}
+
+.applicationlink li a img{
+    width: 50%;
+    height: 50%;
+    object-fit: fill;
+}
+
+.applicationlink li:hover{
+    background-color: orange;
+    
+    
+}
+
+
+/* ARTISTS PAGE */
+
+
+.artists_page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black ;
+
+
+ 
+
+}
+
+.artists_top{
+    width: 80%;
+    height: 30%;
+    
+    margin-top: 10%;
+    position: relative;
+
+}
+
+.heading1,.letters{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+.heading1{
+    color: white;
+    font-size: 36px;
+    font-weight: bolder;
+    text-decoration: underline 3px solid red;
+    text-underline-offset: 8px;
+    
+
+}
+.letters{
+    width: 80%;
+    margin-top: 2% ;
+    margin-left: 10%;
+    margin-bottom: 5%;
+
+}
+
+.letters li{
+    list-style-type: none;
+
+
+}
+
+.letters li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+.letters li a:hover{
+    transform: scale(1.2);
+    color: red;
+}
+
+.genre_dropdn{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    top: 0;
+    right: 10%;
+}
+
+.genre-btn{
+    background-color: black;
+    border-radius: 3%;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 25px;
+
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    border: 3px solid white;
+}
+
+.artists_photos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%; /* Adjust width as needed */
+    max-width: 80%; /* Maximum width for grid */
+    justify-content: space-around;
+}
+
+.grid-item{
+    height: 450px;
+    width: 90%;
+    width: calc(90%/3); 
+
+    display: block;
+}
+.profilephoto{
+    height: 400px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.profilephoto img{
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    overflow: hidden;
+    vertical-align: center;
+    transition: transform ease 0.5s;
+
+
+    
+}
+.profilephoto img:hover{
+    transform: scale(1.05);
+    display: block;
+    
+}
+.profilephoto{
+
+}
+.artistname{
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    margin-top: 10pt;
+}
+
+
+
+
+
+
+
+
+
+

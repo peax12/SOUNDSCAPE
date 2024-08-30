@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "ducks",
+    "password": "Fr33w!ll",
+    "database": "SoundScape",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "ducks",
+    "password": null,
+    "database": "SoundScape",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "ducks",
+    "password": null,
+    "database": "SoundScape",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
