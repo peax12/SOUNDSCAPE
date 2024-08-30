@@ -200,7 +200,32 @@ async function filterbygenre(req,res){
         });
     }
 };
-  
+
+
+async function Artistdetails(req, res) {
+    try {
+        const artist = await models.Artist.findByPk(req.params.id, {
+            include: [
+                { 
+                    model: models.Album, 
+                    as: 'albums',
+                    include: [{ model: models.Song, as: 'songs' }]
+                },
+                { model: models.Song, as: 'songs' }
+            ],
+        });
+
+        if (artist) {
+            res.json(artist);
+        } else {
+            res.status(404).json({ message: 'Artist not found' });
+        }
+    } catch (error) {
+        console.error('Error fetching artist details:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+};
+
 
 
 
@@ -213,6 +238,7 @@ module.exports = {
     createUser:createUser,
     getArtists: getArtists,
     getAlbum: getAlbum,
+    Artistdetails: Artistdetails
 
 
 

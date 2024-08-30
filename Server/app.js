@@ -18,6 +18,8 @@ app.use('/posts/song',postRoute)
 app.use('/posts/createuser',postRoute);
 app.use('/artists',postRoute);
 app.use ('/album',postRoute);
+app.use('artists/:id',postRoute)
+
 
 
 

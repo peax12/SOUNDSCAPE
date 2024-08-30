@@ -20,14 +20,7 @@ module.exports = {
         },
         onUpdate: 'CASCADE',
       },
-      genre_id: {
-        type: Sequelize.INTEGER,
-        references :{
-          model : 'Genre',
-          key : 'genre_id'
-        },
-        onUpdate: 'CASCADE',
-      },
+     
       albumname: {
         type: Sequelize.STRING
       },

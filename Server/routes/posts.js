@@ -18,6 +18,7 @@ router.post('/song', postController.createSong);
 router.get('/',postController.getArtists);
 
 router.get('/listalbum',postController.getAlbum);
+router.get('/:id', postController.Artistdetails);
 
 
 
